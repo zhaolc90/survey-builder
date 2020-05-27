@@ -1,0 +1,1 @@
+/* 2020-05-27 00:26:37 [14 ms] */ CREATE TABLE emp (      empno         INT(4),      ename         VARCHAR(10) NOT NULL ,      job          VARCHAR(9) ,      mgr          INT(4) ,      hiredate      DATE ,      sal          DOUBLE(7,2) ,      PRIMARY KEY (empno)  );

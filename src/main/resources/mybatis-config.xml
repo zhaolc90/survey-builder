@@ -5,12 +5,23 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 <configuration>
     <settings> 
         <setting name="lazyLoadingEnabled" value="true" />
-        <setting name="logLmpl" value="LOG4J" />
+        <!-- <setting name="logLmpl" value="LOG4J" /> -->
     </settings>
-    <!-- <typeAliases>
-        <package name="com.example.demo2"/>
-    </typeAliases> -->
+    <typeAliases>
+        <!-- <package name="com.pwc.survey.builder"/> -->
+    </typeAliases>
+    <environments default="database1">
+        <environment id="database1">
+            <transactionManager type="JDBC"></transactionManager>
+            <dataSource type="POOLED">
+                <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql://localhost:3306/mybatis?useUnicode=true&amp;characterEncoding=UTF-8"/>
+                <property name="username" value="root"/>
+                <property name="password" value="admin1"/>
+            </dataSource>
+        </environment>
+    </environments>
     <mappers>
-        <!-- <mapper resource="mapper/EmployeeMapper.xml" /> -->
+        <!-- <mapper resource="com/pwc/survey/builder/model/EmployeeMapper.xml" /> -->
     </mappers>    
 </configuration>
